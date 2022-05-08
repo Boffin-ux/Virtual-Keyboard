@@ -1,0 +1,121 @@
+* {
+   box-sizing: border-box;
+      &::before,
+      &::after {
+         box-sizing: border-box;
+      }
+      &:focus:not(:focus-visible) {
+         outline: none;
+      }
+}
+
+html,
+body {
+   font-family: $font-main;
+   color: $color-text;
+   font-weight: normal;
+   background-color: $color-primary;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+}
+
+section, main, footer, header, article {
+   display: flex;
+}
+
+ul {
+   padding-left: 0;
+   margin: 0;
+
+   li {
+      list-style: none;
+      cursor: default;
+   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   padding: 0;
+   margin: 0;
+   color: $color-light;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+textarea:focus, input:focus{
+outline: none;
+}
+
+button, input {
+   outline: none;
+   border: none;
+   cursor: pointer;
+}
+
+.container {
+   width: 120rem;
+   margin: 0 auto;
+}
+main {
+   flex-direction: column;
+   padding: 2rem;
+}
+.header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2rem;
+   &__text {
+      font-size: 4rem;
+      font-weight: 900;
+   }
+}
+.textarea {
+   width: 100%;
+   height: 25rem;
+   border: none;
+   border-radius: 1rem;
+   font-size: 2.5rem;
+   line-height: 130%;
+   padding: 2rem;
+   resize: none;
+   overflow: hidden;
+   border-bottom: 1em solid white;
+   box-shadow: $shadow-textarea;
+      &:focus {
+         box-shadow: $shadow-textarea-active;
+      }
+}
+.textarea--active {
+   box-shadow: $shadow-textarea-active;
+}
+
+footer {
+   padding: 0.5rem 2rem;
+}
+.footer {
+   &__text {
+      display: flex;
+      justify-content: space-between;
+      color: $color-light;
+      font-size: 1.8rem;
+      line-height: 110%;
+      opacity: 0.5;
+      width: 100%;
+      padding: 0 1rem;
+   }
+   p {
+      display: flex;
+      margin: 0;
+   }
+}
